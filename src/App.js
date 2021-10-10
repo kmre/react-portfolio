@@ -5,6 +5,7 @@ import About from './components/About';
 import ContactForm from './components/Contact';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 function App() {
   // const [categories] = useState([
@@ -64,6 +65,7 @@ function App() {
           <ContactForm></ContactForm>
         )}
       </main> */}
+      <Footer></Footer>
     </div>
   );
 }

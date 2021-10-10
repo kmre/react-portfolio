@@ -31,14 +31,21 @@ function Nav(props) {
         <ul className="flex-row">
           {/* <li className="mx-2"> */}
           <li className={`mx-2 ${aboutSelected && 'navActive'}`}>
-            <a data-testid="about" href="#about" onClick={() => {
+            {/* <a data-testid="about" href="#about" onClick={() => {
               setAboutSelected(true) 
               setContactSelected(false) 
               setProjectSelected(false) 
               setResumeSelected(false)
               }}>
               About me
-            </a>
+            </a> */}
+            <span onClick={() => {
+              setAboutSelected(true) 
+              setContactSelected(false) 
+              setProjectSelected(false) 
+              setResumeSelected(false)
+              }}>
+              About Me</span>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => {

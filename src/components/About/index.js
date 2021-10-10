@@ -3,7 +3,7 @@ import aboutImage from '../../assets/about-pic.png';
 function About() {
   return (
     <section className="my-5">
-      <h1 id="about">About me</h1>
+      <h1 id="about">About Me</h1>
       <img src={aboutImage} className="my-2" style={{ width: "10%" }} alt="about-pic" />
       <div className="my-2">
         <p>
