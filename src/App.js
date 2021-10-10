@@ -28,9 +28,9 @@ function App() {
   if (contactSelected) {
     selection = <ContactForm></ContactForm>
   } else if (projectSelected) {
-    selection = <About></About>
+    selection = <Projects></Projects>
   } else if (resumeSelected) {
-    selection = <ContactForm></ContactForm>
+    selection = <Resume></Resume>
   } else {
     selection = <About></About>
   }

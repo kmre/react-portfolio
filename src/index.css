@@ -183,6 +183,55 @@ align-items: center;
 justify-content: center;
 }
 
+.container_7 { /*Same as Container for div classes inside the articles but with flex row wrap*/
+  width: 75%;
+  padding: 1% 5% 1% 3%;
+  border-left: solid 5px var(--color_3);
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container_8 { /*Container for Work Section images flex:1 1 auto for Run Buddy*/
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: wrap column;
+  position: relative;
+  padding: 1% 1% 0% 1%;
+}
+.container_9 { /*Container for text inside run buddy*/
+  padding: 1% 5% 1% 1%;
+  border-left: solid 5px var(--color4);
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  font-size: 100%;
+  background-color: var(--color_1);
+  color: var(--color_4);
+} 
+
+.container_10 { /*Same as Container for div classes inside the articles but with flex row wrap*/
+  display: flex;
+  flex-flow: wrap column;
+  position: relative;
+  width: 50%;
+  padding: 1% 1% 0% 1%;
+}
+
+.future-work {
+  background: rgba(255, 255, 255, 0.2);
+  }
+  .container_animation { /*Animation for Work container*/
+  transition: opacity 100ms transform .2s;
+  }
+  .container_animation:hover {
+  /* animation: change 4s infinite;
+  animation-timing-function: linear; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+  opacity: .5;
+  transform: scale(1.05);
+  z-index: 1;
+  }
+
 .container {
   width: 85%;
   max-width: 1200px;

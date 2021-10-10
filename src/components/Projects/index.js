@@ -1,21 +1,65 @@
 import React from 'react';
-import aboutImage from '../../assets/about-pic.png';
+import futureImg from '../../assets/pixel-cells-3699334.svg';
+import runImg from '../../assets/run_buddy2.png';
+import pro1 from '../../assets/project1.png';
+import apple from '../../assets/apple-1684590.svg';
+import web from '../../assets/website-1624028.svg';
+
 function About() {
   return (
     <section className="my-5">
-      <h1 id="about">About me</h1>
-      <img src={aboutImage} className="my-2" style={{ width: "10%" }} alt="about-pic" />
-      <div className="my-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
-          condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna
-          mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum.
-          Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique
-          justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea
-          dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh.
-          Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
-        </p>
-      </div>
+
+                    <div class="container_7">
+                        <div class="container_8 container_animation">
+                            <a href="https://kmre.github.io/run_buddy/" target="_blank">
+                                <img src={runImg} alt="Run_Buddy" style={{ width: "100%", height:"auto" }}/>
+                            </a>
+
+                            <div class="container_9">
+                                Run Buddy
+                            </div>
+                        </div>
+
+                        <div class="container_10 container_animation future-work">
+                            <a href="#">
+                                <img src={futureImg} alt="Future Work" style={{ width: "100%", height:"auto" }}/>
+                            </a>
+
+                            <div class="container_9">
+                                Future Work
+                            </div>
+                        </div>
+
+                        <div class="container_10 container_animation">
+                            <a href="#">
+                                <img src={apple} alt="Future Work" style={{ width: "100%", height:"100%" }}/>
+                            </a>
+
+                            <div class="container_9">
+                                Future Work
+                            </div>
+                        </div>
+
+                        <div class="container_10 container_animation future-work">
+                            <a href="#">
+                                <img src={web} alt="Future Work" style={{ width: "100%", height:"auto" }}/>
+                            </a>
+
+                            <div class="container_9">
+                                Future Work
+                            </div>
+                        </div>
+
+                        <div class="container_10 container_animation">
+                            <a href="https://kmre.github.io/project1/" target="_blank">
+                                <img src={pro1} alt="NightCap Events" style={{ width: "100%", height:"auto" }}/>
+                            </a>
+
+                            <div class="container_9">
+                                NightCap Events
+                            </div>
+                        </div> 
+                    </div>
     </section>
   );
 }

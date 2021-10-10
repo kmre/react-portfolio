@@ -1,12 +1,15 @@
 import React from 'react';
-import aboutImage from '../../assets/about-pic.png';
+import resumePDF from '../../assets/Engineering_Resume_Karla_Romero.pdf'
+
 function About() {
   return (
     <section className="my-5">
-      <h1 id="about">About me</h1>
-      <img src={aboutImage} className="my-2" style={{ width: "10%" }} alt="about-pic" />
+      <h1 id="about">Resume</h1>
+      <a target="_blank" href= {resumePDF}>
+        Click Here to Open Resume PDF File
+      </a>
       <div className="my-2">
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
           condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna
           mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum.
@@ -14,7 +17,7 @@ function About() {
           justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea
           dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh.
           Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
-        </p>
+        </p> */}
       </div>
     </section>
   );

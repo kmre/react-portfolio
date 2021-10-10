@@ -1,11 +1,11 @@
 import React from 'react';
 import gitImage from '../../assets/Git.png';
-import inImage from '../../assets/In.png';
+import inImage from '../../assets/Linkedin.png';
 
 function Footer() {
   return (
     <footer>
-      <div style={{ width: "5%", margin: "10px" }}>
+      <div style={{ width: "8%", margin: "10px" }}>
         <a target="_blank" href="https://www.linkedin.com/in/romerokarla/">
           <img src={inImage} alt="git"/>
         </a>
