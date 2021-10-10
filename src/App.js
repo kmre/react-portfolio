@@ -3,6 +3,8 @@ import Nav from './components/Nav';
 import About from './components/About';
 // import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
+import Projects from './components/Projects';
+import Resume from './components/Resume';
 
 function App() {
   // const [categories] = useState([
@@ -18,6 +20,19 @@ function App() {
   // const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const [aboutSelected, setAboutSelected] = useState(true);
   const [contactSelected, setContactSelected] = useState(false);
+  const [projectSelected, setProjectSelected] = useState(false);
+  const [resumeSelected, setResumeSelected] = useState(false);
+
+  var selection;
+  if (contactSelected) {
+    selection = <ContactForm></ContactForm>
+  } else if (projectSelected) {
+    selection = <About></About>
+  } else if (resumeSelected) {
+    selection = <ContactForm></ContactForm>
+  } else {
+    selection = <About></About>
+  }
 
   return (
     <div>
@@ -29,17 +44,26 @@ function App() {
         // currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
+        projectSelected={projectSelected}
+        setProjectSelected={setProjectSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
+
       ></Nav>
+
       <main>
+      {selection}
+      </main>
+      {/* <main>
         {!contactSelected ? (
           <>
-            {/* <Gallery currentCategory={currentCategory}></Gallery> */}
+            { <Gallery currentCategory={currentCategory}></Gallery> }
             {<About aboutSelected={aboutSelected}></About>}
           </>
         ) : (
           <ContactForm></ContactForm>
         )}
-      </main>
+      </main> */}
     </div>
   );
 }

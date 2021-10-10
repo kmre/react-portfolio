@@ -3,11 +3,17 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const {
-    categories = [],
-    setCurrentCategory,
+    // categories = [],
+    // setCurrentCategory,
     contactSelected,
-    currentCategory,
+    // currentCategory,
     setContactSelected,
+    setAboutSelected,
+    aboutSelected,
+    setProjectSelected,
+    projectSelected,
+    setResumeSelected,
+    resumeSelected
   } = props;
 
   // useEffect(() => {
@@ -23,15 +29,45 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+          {/* <li className="mx-2"> */}
+          <li className={`mx-2 ${aboutSelected && 'navActive'}`}>
+            <a data-testid="about" href="#about" onClick={() => {
+              setAboutSelected(true) 
+              setContactSelected(false) 
+              setProjectSelected(false) 
+              setResumeSelected(false)
+              }}>
               About me
             </a>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+            <span onClick={() => {
+              setAboutSelected(false) 
+              setContactSelected(true) 
+              setProjectSelected(false) 
+              setResumeSelected(false)
+              }}>
+              Contact</span>
           </li>
-          {categories.map((category) => (
+          <li className={`mx-2 ${projectSelected && 'navActive'}`}>
+          <span onClick={() => {
+              setAboutSelected(false) 
+              setContactSelected(false) 
+              setProjectSelected(true) 
+              setResumeSelected(false)
+              }}>
+              Projects</span>
+          </li>
+          <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
+          <span onClick={() => {
+              setAboutSelected(false) 
+              setContactSelected(false) 
+              setProjectSelected(false) 
+              setResumeSelected(true)
+              }}>
+              Resume</span>
+          </li>
+          {/* {categories.map((category) => (
             <li
               className={`mx-1 ${
                 currentCategory.name === category.name && !contactSelected && 'navActive'
@@ -47,7 +83,7 @@ function Nav(props) {
                 {capitalizeFirstLetter(category.name)}
               </span>
             </li>
-          ))}
+          ))} */}
         </ul>
       </nav>
     </header>
