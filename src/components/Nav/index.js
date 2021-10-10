@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const {
-    // categories = [],
-    // setCurrentCategory,
     contactSelected,
-    // currentCategory,
     setContactSelected,
     setAboutSelected,
     aboutSelected,
@@ -15,10 +11,6 @@ function Nav(props) {
     setResumeSelected,
     resumeSelected
   } = props;
-
-  // useEffect(() => {
-  //   document.title = capitalizeFirstLetter(currentCategory.name);
-  // }, [currentCategory]);
 
   return (
     <header className="flex-row px-1">
@@ -29,16 +21,7 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          {/* <li className="mx-2"> */}
           <li className={`mx-2 ${aboutSelected && 'navActive'}`}>
-            {/* <a data-testid="about" href="#about" onClick={() => {
-              setAboutSelected(true) 
-              setContactSelected(false) 
-              setProjectSelected(false) 
-              setResumeSelected(false)
-              }}>
-              About me
-            </a> */}
             <span onClick={() => {
               setAboutSelected(true) 
               setContactSelected(false) 
@@ -74,23 +57,6 @@ function Nav(props) {
               }}>
               Resume</span>
           </li>
-          {/* {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
-                }`}
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category);
-                  setContactSelected(false);
-                }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
-            </li>
-          ))} */}
         </ul>
       </nav>
     </header>

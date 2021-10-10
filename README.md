@@ -19,6 +19,7 @@ Create a React portfolio
 ---
 
 ## Installation
+![Screenshot](src\assets\screenshot.png?raw=true "Screenshot")
 [Git repo link](https://github.com/kmre/react-portfolio.git)
 npm, React and JS where used to create this application
 
